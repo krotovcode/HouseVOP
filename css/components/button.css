@@ -1,0 +1,17 @@
+.btn{
+    display: inline-block;
+    line-height: 1;
+    font-weight: 700;
+    width: 100%;
+    padding: 15px;
+    border-style: none;
+}
+
+.btn-accent{
+    background-color: #D4C17F;
+    color: aliceblue;
+    transition: all .9s ease-out;
+}
+.btn-accent:hover{
+    background-color: #706231;
+}

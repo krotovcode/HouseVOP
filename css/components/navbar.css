@@ -1,0 +1,128 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+    padding: 30px 0;
+}
+
+.navbar_toggler {
+    position: relative;
+    z-index: 12;
+    display: none;
+    border: none;
+    position: relative;
+    width: 31px;
+    height: 24px;
+    background: transparent;
+}
+
+.navbar_toggler i {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+
+.navbar_toggler i:nth-child(1) {
+    top: 0;
+}
+
+.navbar_toggler i:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80%;
+}
+
+.navbar_toggler i:nth-child(3) {
+    bottom: 0;
+}
+
+/* Active */
+.navbar_toggler_active i:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+.navbar_toggler_active i:nth-child(2) {
+    display: none;
+}
+
+.navbar_toggler_active i:nth-child(3) {
+    top: 50%;
+    bottom: unset;
+    transform: rotate(-45deg);
+
+}
+
+/* /Active */
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-menu {
+    padding-left: 0px;
+    margin-bottom: 0px;
+    list-style-type: none;
+}
+
+.navbar-menu li {
+    display: inline-block;
+}
+
+.navbar-menu-link {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    transition: all 1s ease-out;
+    padding: 20px;
+
+}
+
+@media (max-width: 992px) {
+    .mobile-wrap {
+        position: fixed;
+        background-color: #242B33;
+        box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.36);
+        top: -100vh;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+        height: auto;
+        padding: 108px 0 40px 0;
+
+    }
+
+    .mobile_wrap_show {
+        top: 0;
+    }
+
+    .navbar_toggler {
+        display: block;
+    }
+
+    .navbar-menu {
+        text-align: center;
+    }
+
+    .navbar-menu li {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .navbar-menu li:last-child {
+        margin-bottom: 0;
+    }
+
+
+    .navbar-menu-link {
+        font-size: 20px;
+
+    }
+}

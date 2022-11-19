@@ -1,0 +1,122 @@
+.header {
+    position: relative;
+    min-height: 840px;
+    background-size: cover;
+    background-repeat: no repeat;
+    background-position: center;
+    /* background-attachment: fixed; */
+    display: flex;
+    align-items: flex-end;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(180deg, #242B33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242B33 92.19%);
+}
+
+.header_content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    text-align: center;
+    max-width: 582px;
+    margin: auto;
+}
+
+.header_contacts {
+    margin-top: 340px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 60px;
+}
+
+.header_contacts-item {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: 1s ease-out;
+}
+
+.header_contacts-item [class*="icon-"]::before {
+    font-size: 21px;
+    margin-right: 15px;
+    transition: 1s ease-out;
+}
+
+.header_contacts-item:hover [class*="icon-"]::before {
+    color: #d4c17f;
+}
+
+.header_contacts-item:hover {
+    color: #d4c17f;
+}
+
+.header-mouse-effect {
+    position: absolute;
+    top: 210px;
+    left: 50%;
+    transform: translateY(-50%);
+}
+
+.header-mouse-effect-mouse {
+    animation: downUp 0.9s cubic-bezier(0.1, 0.25, 0.1, 1) 0s infinite alternate both;
+}
+
+@keyframes downUp {
+    from {
+        transform: translateY(-10px);
+    }
+
+    to {
+        transform: translateY(5px);
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .header {
+        min-height: 700px;
+    }
+
+    .header_contacts {
+        margin-top: 230px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        min-height: 435px;
+    }
+
+    .header::before {
+        background: linear-gradient(180deg, #242B33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242B33 92.19%), linear-gradient(0deg, rgba(36, 43, 51, 0.78), rgba(36, 43, 51, 0.78));
+    }
+
+    .header-mouse-effect {
+        display: none;
+    }
+
+    .header_contacts {
+        margin-top: 89px;
+        padding-bottom: 30px;
+        flex-flow: column-reverse wrap;
+
+    }
+
+    .header_contacts-item {
+        margin: auto;
+    }
+
+    .header_contacts-item:nth-child(2) {
+        margin-bottom: 15px;
+    }
+
+}
